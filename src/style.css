@@ -38,7 +38,7 @@ body {
   background-color: #fdcb6e;
   font-size: 1.5rem;
 }
-.form input {
+.form input,.edit-input {
   box-sizing: border-box;
   background-color: transparent;
   padding: 0.7rem;
