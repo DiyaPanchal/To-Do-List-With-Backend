@@ -2,13 +2,19 @@ import React, { useState } from "react";
 function App() {
 
   const [inputText, setInputText] = useState("");
-  const [items, setItem] = useState([]);
+  const [items, setItems] = useState([]);
+
   function handleChange(event) {
     const newValue = event.target.value;
     setInputText(newValue);
   }
-  function handleClick() {}
-
+   function addItem(){
+    setItems(prevItems => {
+      return [...prevItems, inputText];      
+    });
+    setInputText(""); 
+   }
+  
   return (
     <div className="container">
       <div className="heading">
@@ -16,7 +22,7 @@ function App() {
       </div>
       <div className="form">
         <input onChange={handleChange} type="text" value={inputText} />
-        <button onClick={handleClick}>
+        <button onClick={addItem}>
           <span>Add</span>
         </button>
       </div>
