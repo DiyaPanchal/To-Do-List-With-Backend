@@ -7,7 +7,7 @@ function ToDoItem(props) {
 
   useEffect(() => {
     setNewText(props.text);
-  }, [props.text]); // Update newText whenever props.text changes
+  }, [props.text]); 
 
   function handleEditClick() {
     setIsEditing(!isEditing);

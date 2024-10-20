@@ -9,7 +9,6 @@ function App() {
     fetchItems();
   }, []);
 
-  // Fetch all items from the API
   async function fetchItems() {
     const response = await fetch("http://localhost:5000/api/todos");
     const data = await response.json();
@@ -17,13 +16,10 @@ function App() {
   }
 
     function addItem(inputText) {
-      // Create a new to-do item object
       const newItem = {
         text: inputText,
         isDone: false,
       };
-
-      // Send POST request to your backend API
       fetch("http://localhost:5000/api/todos", {
         method: "POST",
         headers: {
@@ -38,7 +34,7 @@ function App() {
           return response.json();
         })
         .then((data) => {
-          // Update state with the newly added item
+        
           setItems((prevItems) => [...prevItems, data]);
         })
         .catch((error) => {
