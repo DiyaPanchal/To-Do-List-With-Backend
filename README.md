@@ -28,7 +28,7 @@ This is a simple To-Do List application built with React for the frontend and No
    npm install
 4. Add the font to your project: In your index.html, add the following line in the <head> section to load the "Architects Daughter" font from Google Fonts:
     ```bash
-   n<link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet" />
 5. Start the frontend application:
      ```bash
    npm start
@@ -50,10 +50,10 @@ This is a simple To-Do List application built with React for the frontend and No
 
 ## API Endpoints
 
-GET /api/todos - Fetch all to-do items
-POST /api/todos - Create a new to-do item
-PUT /api/todos/:id - Update an existing to-do item
-DELETE /api/todos/:id - Delete a to-do item
+1. GET /api/todos - Fetch all to-do items
+2. POST /api/todos - Create a new to-do item
+3. PUT /api/todos/:id - Update an existing to-do item
+4. DELETE /api/todos/:id - Delete a to-do item
 
 ## Tools and Libraries Used
 
