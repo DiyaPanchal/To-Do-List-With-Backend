@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function ToDoItem(props) {
-  const [isDone, setIsDone] = useState(false); 
+  const [isDone, setIsDone] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [newText, setNewText] = useState(props.text);
 
+  useEffect(() => {
+    setNewText(props.text);
+  }, [props.text]); // Update newText whenever props.text changes
+
   function handleEditClick() {
-    setIsEditing(!isEditing); 
+    setIsEditing(!isEditing);
   }
 
   function handleChange(event) {

@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
+const todoRoutes = require("./routes/todoRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -16,6 +17,8 @@ mongoose
   })  
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
+
+app.use('/api/todos', todoRoutes); 
 
 app.get("/", (req, res) => {
   res.send("To-Do List API");
