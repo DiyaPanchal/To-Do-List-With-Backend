@@ -1,4 +1,3 @@
-// routes/todoRoutes.js
 const express = require("express");
 const Todo = require("../models/Todo");
 
