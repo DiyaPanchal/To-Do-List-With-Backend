@@ -7,7 +7,13 @@ const todoRoutes = require("./routes/todoRoutes");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://todolist-two-sooty-97.vercel.app/"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true
+  })
+);
 app.use(express.json());
 
 mongoose
