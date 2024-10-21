@@ -10,7 +10,7 @@ function App() {
   }, []);
 
   async function fetchItems() {
-    const response = await fetch("https://to-do-list-with-backend.onrender.com/api/todos");
+    const response = await fetch("https://to-do-list-with-backend.vercel.app/api/todos");
     const data = await response.json();
     setItems(data);
   }
@@ -20,7 +20,7 @@ function App() {
         text: inputText,
         isDone: false,
       };
-      fetch("https://to-do-list-with-backend.onrender.com/api/todos", {
+      fetch("https://to-do-list-with-backend.vercel.app/api/todos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +43,7 @@ function App() {
     }
 
   async function editItem(id, newText) {
-    const response = await fetch(`https://to-do-list-with-backend.onrender.com/api/todos/${id}`, {
+    const response = await fetch(`https://to-do-list-with-backend.vercel.app/api/todos/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +63,7 @@ function App() {
   }
 
   async function deleteItem(id) {
-    const response = await fetch(`https://to-do-list-with-backend.onrender.com/api/todos/${id}`, {
+    const response = await fetch(`https://to-do-list-with-backend.vercel.app/api/todos/${id}`, {
       method: "DELETE",
     });
 
